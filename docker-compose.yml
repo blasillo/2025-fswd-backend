@@ -1,0 +1,10 @@
+services:
+  oracle-db:
+    ports:
+      - '1521:1521'
+    container_name: oracle
+    image: gvenzl/oracle-free:slim
+    environment:
+      ORACLE_PASSWORD: SuperSecret0
+    volumes:
+      - ./scripts:/docker-entrypoint-initdb.d
