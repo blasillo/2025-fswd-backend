@@ -84,10 +84,10 @@ VALUES ('Usuario demo', 'formacion@eclap.jcyl.es', 'CambiaLaClaveYa!', SYSTIMEST
 
 -- Asociar roles al usuario (asumiendo IDs generados: 1 para BASE, 2 para ADMINISTRADOR, 1 para usuario)
 INSERT INTO app_usuarios_roles (id_rol, id_usuario)
-VALUES (1, 1);  -- BASE al usuario demo
+VALUES (1, 1);
 
 INSERT INTO app_usuarios_roles (id_rol, id_usuario)
-VALUES (2, 1);  -- ADMINISTRADOR al usuario demo
+VALUES (2, 1);
 
 -- Confirmar las inserciones
 COMMIT;
