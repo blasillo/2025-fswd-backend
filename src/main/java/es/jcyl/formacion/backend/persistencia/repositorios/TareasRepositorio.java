@@ -1,7 +1,17 @@
 package es.jcyl.formacion.backend.persistencia.repositorios;
 
 import es.jcyl.formacion.backend.persistencia.entidades.Tarea;
+import es.jcyl.formacion.backend.persistencia.entidades.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 public interface TareasRepositorio extends JpaRepository<Tarea,Integer> {
+
+    // TODO: lista las tareas que pertenecen a un usuario
+    List<Tarea> findByUsuario (Usuario usuario);
+
+
+
+
 }
