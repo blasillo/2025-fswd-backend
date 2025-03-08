@@ -18,35 +18,29 @@ import static jakarta.persistence.FetchType.EAGER;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "APP_USUARIOS")
+//TODO
+//TODO
 @EntityListeners(AuditingEntityListener.class)
 public class Usuario {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID_USUARIO")
+    //TODO
+    //TODO
+    //TODO
     private Integer id;
 
-    @Column (name="NOMBRE_APELLIDOS", length = 200)
+    //TODO
     private String nombreCompleto;
 
-    @Column (name="INICIALES", length = 10)
+    //TODO
     private String iniciales;
 
-    @Column (name="CORREO_ELECTRONICO",length = 100, unique = true, nullable = false)
+    //TODO
     private String correo;
 
-    @Column (name = "CONTRASENA", length = 100 , nullable = false)
-    @Size(min=6,max=100)
+    //TODO
     private String clave;
 
-    @ManyToMany( fetch = EAGER )
-    @JoinTable(
-            name = "app_usuarios_roles", // Nombre de la tabla intermedia
-            joinColumns = @JoinColumn(name = "id_usuario"),
-            inverseJoinColumns = @JoinColumn(name = "id_rol")
-    )
+    //TODO
     private List<Rol> roles;
 
     @CreatedDate

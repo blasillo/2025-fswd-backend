@@ -19,22 +19,21 @@ import java.util.List;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "APP_ROLES")
+//TODO
+//TODO
 @EntityListeners(AuditingEntityListener.class)
 public class Rol {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id_rol")
+    //TODO
+    //TODO
+    //TODO
     private Integer id;
 
-    @Column(name="nombre_rol", length = 60, nullable = false, unique = true)
+    //TODO
     private String nombre;
 
 
-    @JsonIgnore
-    @ManyToMany(mappedBy = "roles")
+    //TODO
     private List<Usuario> usuarios;
 
     @CreatedDate

@@ -15,29 +15,27 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "APP_TAREAS")
+//TODO
+//TODO
 @EntityListeners(AuditingEntityListener.class)
 public class Tarea {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID_TAREA")
+    //TODO
+    //TODO
+    //TODO
     private Integer id;
 
-    @Column(name = "nombre", length = 200, nullable = false)
+    //TODO
     private String nombre;
 
-    @Column (name="estado")
-    @Min(value = 0, message = "el estado debe estar entre 0 y 100")
-    @Max(value = 100, message = "el estado debe estar entre 0 y 100")
+    //TODO
     private Integer estado;
 
-    @Column(name = "color", length=50)
+    //TODO
     private String color;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "ID_USUARIO")
+    //TODO
+    //TODO
     private Usuario usuario;
 
 
