@@ -11,19 +11,15 @@ import java.util.Optional;
 public interface UsuariosRepositorio extends JpaRepository<Usuario,Integer> {
 
     //TODO: buscar un usuario por el correo
-    Optional<Usuario> findByCorreo (String correo);
+    Optional<Usuario> xxxxxxx (String correo);
 
     //TODO: Buscar usuario por correo y clave
-    Optional<Usuario> findByCorreoAndClave(String correo, String clave);
+    Optional<Usuario> yyyyyy (String correo, String clave);
 
     //TODO: ver si un usuario con un correo existe
-    Boolean existsByCorreo (String correo);
+    Boolean zzzzzzzzzzzz (String correo);
 
     // TODO: listado de los usuarios que tienen el rol de administrador
-    @Query("""
-       select u
-        from Usuario u JOIN u.roles r 
-       WHERE r.nombre = 'ADMINISTRADOR'       
-    """)
+
     List<Usuario> listadoAdministradores ();
 }
