@@ -1,6 +1,5 @@
 package es.jcyl.formacion.backend.modelos;
 
-import jakarta.validation.constraints.*;
 import lombok.*;
 
 @Getter
