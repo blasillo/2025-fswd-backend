@@ -13,20 +13,19 @@ import java.util.List;
 import java.util.Optional;
 
 // TODO : anotación requerida
-@Service
+
 // TODO : anotaciones necesarios
-@RequiredArgsConstructor
+
 public class TareaServicioImpl implements TareaServicio {
 
     // TODO : inyectar dependecias
     // TareasRepositorio tareasRepo;
     // UsuariosRepositorio usuariosRepo;
-    private final TareasRepositorio tareasRepo;
-    private final UsuariosRepositorio usuariosRepo;
+
 
     // TODO: inyectar dependencia
     // TareaMapeo mapeo;
-    private final TareaMapeo mapeo;
+
 
     @Override
     public TareaModelo crearTarea(TareaModelo tarea) {
@@ -40,15 +39,13 @@ public class TareaServicioImpl implements TareaServicio {
     @Override
     public List<TareaModelo> obtenerTareas(String correo) {
         // TODO: recuperar usuario a partir del correo
-        Optional<Usuario> usuario = usuariosRepo.findByCorreo(correo);
+        Optional<Usuario> usuario //TODO
         if(usuario.isEmpty()) {
             throw new EntityNotFoundException("El usuario no existe");
         }
 
-        List<Tarea> tareas = tareasRepo.findByUsuario(usuario.get());
-        List<TareaModelo> respuesta = tareas.stream()
-                                            .map(mapeo::deEntidadAModelo)
-                                            .toList();
+        List<Tarea> tareas  //TODO
+        List<TareaModelo> respuesta //TODO
 
         return respuesta;
     }
@@ -68,12 +65,12 @@ public class TareaServicioImpl implements TareaServicio {
 
     @Override
     public Integer borrarTarea(Integer tareaId) {
-        Optional<Tarea> tarea = tareasRepo.findById(tareaId);
-
+        Optional<Tarea> tarea //TODO
         if(tarea.isEmpty()) {
             throw new EntityNotFoundException("La tarea no existe");
         }
-        tarea.ifPresent(tareasRepo::delete);
+        //TODO: si existe, borrar tarea
+
         return tareaId;
     }
 }

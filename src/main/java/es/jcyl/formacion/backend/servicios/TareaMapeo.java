@@ -22,11 +22,7 @@ public class TareaMapeo {
     public TareaModelo deEntidadAModelo (Tarea tarea) {
 
         return TareaModelo.builder()
-                .id ( tarea.getId())
-                .nombre( tarea.getNombre())
-                .estado( tarea.getEstado())
-                .color( tarea.getColor())
-                .usuarioCorreo( tarea.getUsuario().getCorreo())
+                //TODO: convertir de entidad a modelo
                 .build();
     }
 }
