@@ -27,6 +27,8 @@ public class QueryTests {
 
     @Autowired
     private TareasRepositorio tareaRepo;
+    @Autowired
+    private RolesRepositorio rolesRepositorio;
 
 
     @Test

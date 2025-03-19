@@ -4,11 +4,13 @@ import es.jcyl.formacion.backend.persistencia.entidades.Rol;
 import es.jcyl.formacion.backend.persistencia.entidades.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
-public interface UsuariosRepositorio extends JpaRepository<Usuario,Integer> {
+@Repository
+public interface UsuariosRepositorio extends JpaRepository<Usuario,Integer>, UsuariosRepositorioCustom{
 
     //TODO: buscar un usuario por el correo
     Optional<Usuario> findByCorreo (String correo);
@@ -26,4 +28,6 @@ public interface UsuariosRepositorio extends JpaRepository<Usuario,Integer> {
        WHERE r.nombre = 'ADMINISTRADOR'       
     """)
     List<Usuario> listadoAdministradores ();
+
+    List<Usuario> listadoUsuariosBase();
 }
