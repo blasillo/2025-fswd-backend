@@ -29,7 +29,7 @@ public class SeguridadConfig {
             .headers(headers -> headers.frameOptions(frame -> frame.sameOrigin())) // Configura frameOptions
             .authorizeHttpRequests(auth -> auth
                     .requestMatchers("/api/v1/actuator/**","/actuator/**").permitAll()
-                    .requestMatchers("/api/v1/**","/tareas/**").hasAnyRole(ADMIN,USER)
+                    .requestMatchers("/api/v1/**","/tareas/**") //TODO
                     .anyRequest().authenticated() // Todo lo demás requiere autenticación
             )
             .formLogin(AbstractAuthenticationFilterConfigurer::permitAll )// Permite acceso al formulario de login para todos
