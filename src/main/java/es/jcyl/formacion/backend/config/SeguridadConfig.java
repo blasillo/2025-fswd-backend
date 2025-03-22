@@ -18,16 +18,8 @@ public class SeguridadConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         // Habilita autenticación mediante formulario
-        http
-            .csrf(csrf -> csrf.disable()) // Desactiva CSRF
-            .headers(headers -> headers.frameOptions(frame -> frame.sameOrigin())) // Configura frameOptions
-            .authorizeHttpRequests(auth -> auth
-                    .requestMatchers("/api/v1/actuator/**","/actuator/**").permitAll()
-                    .requestMatchers("/api/v1/**","/tareas/**").permitAll()
-                    .anyRequest().authenticated() // Todo lo demás requiere autenticación
-            )
-            .formLogin(AbstractAuthenticationFilterConfigurer::permitAll )// Permite acceso al formulario de login para todos
-            .httpBasic(httpBasic -> {}); // Habilita autenticación HTTP Basic
+        http.csrf(csrf -> csrf.disable()) // Desactiva CSRF
+                    ;
 
         return http.build();
 
