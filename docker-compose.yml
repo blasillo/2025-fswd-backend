@@ -8,3 +8,15 @@ services:
       ORACLE_PASSWORD: SuperSecret0
     volumes:
       - ./scripts:/docker-entrypoint-initdb.d
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:23.0.4
+    container_name: keycloak
+    ports:
+      - "8000:8080"
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+    volumes:
+      - ./keycloak:/opt/keycloak/data
+    command: [ "start-dev" ]

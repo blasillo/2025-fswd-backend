@@ -18,7 +18,7 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SeguridadConfig {
 
     public static final String ADMIN = "ADMINISTRADOR";
-    public static final String USER = "BASE";
+    public static final String USER = "USUARIO";
     private final JwtConverter jwtConverter;
 
     @Bean
