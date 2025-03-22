@@ -12,18 +12,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class SeguridadConfig {
 
-    /*
-    @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.csrf(csrf -> csrf.disable()) // Desactiva CSRF
-            .headers(headers -> headers.frameOptions(frame -> frame.sameOrigin())) // Configura frameOptions
-            .authorizeHttpRequests(auth -> auth
-                    .requestMatchers("/**").permitAll() // Permite acceso a todos los endpoints
-            );
 
-        return http.build();
-    }
-    */
 
 
     @Bean

@@ -16,6 +16,8 @@ import java.util.List;
 @RestController
 @RequestMapping("tareas")
 @RequiredArgsConstructor
+//TODO
+@CrossOrigin(origins = "*", allowCredentials = "true")
 public class TareaControlador {
 
     private final TareaServicio servicio;
